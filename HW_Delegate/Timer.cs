@@ -9,17 +9,13 @@ namespace HW_Delegate
 {
     class Timer
     {
-        public static int TimerStart()
+        public static void TimerStart()
         {
             int timer = 0;
 
-
-
-            while (true)
-            {
-                Console.WriteLine(timer);
-                Thread.Sleep(1000);
-                timer++;
+            Console.WriteLine(timer);
+            Thread.Sleep(1000);
+            timer++;
             }
         }
 

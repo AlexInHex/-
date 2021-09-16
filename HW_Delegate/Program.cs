@@ -26,7 +26,7 @@ namespace HW_Delegate
         static void Main(string[] args)
         {
             TimerEvent instance = new TimerEvent();
-
+            Timer timer = new Timer();
             instance.tick += new timerDelegat (Handler1);
             instance.tick += Handler2;
 
