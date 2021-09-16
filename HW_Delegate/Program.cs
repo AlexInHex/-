@@ -1,60 +1,46 @@
 ﻿using System;
+using HW_Delegate;
 
 namespace HW_Delegate
-{
+{   
     class Program
     {
-        delegate int Aripfmetic(int num1, int num2);
+
         static void Main(string[] args)
         {
-            int num1 = int.Parse(Console.ReadLine());
-            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите операцию и 2 числа над которыми будут проводится операции↓↓↓");
 
-            Aripfmetic aripfmeticSum = (num1, num2) => num1 + num2;
-
-            Aripfmetic aripfmetiсSub = (num1, num2) => num1 - num2;
-
-            Aripfmetic aripfmeticMult = (num1, num2) => num1 * num2;
-
-            Aripfmetic aripfmeticDev = (num1, num2) =>
-            {
-                if (num2 == 0)
-                {
-                    Console.WriteLine("на ноль делить нельзя");
-                    return 0;
-                }
-                return num1 / num2;
-
-            };
-
-            Console.WriteLine(aripfmeticSum(num1, num2));
-            Console.WriteLine(aripfmetiсSub(num1, num2));
-            Console.WriteLine(aripfmeticMult(num1, num2));
-            Console.WriteLine(aripfmeticDev(num1, num2));
-
-
-            RandDelegat[] MassDelegats = new RandDelegat[]
-                {
-                    RandomNum,
-                    RandomNum,
-                    RandomNum,
-                    RandomNum,
-                    RandomNum
-                };
             
 
-        }
+            DataAdd dataAdd = new DataAdd();
 
-        delegate int RandDelegat();
+             while (true)
+             {
+                 string command = Console.ReadLine();
+                 var inputArr = command.Split(' ');
+                 string[] param = new string[3];
+                 int index = 0;
+
+
+                 foreach (var item in inputArr)
+                 {
+                     if (!string.IsNullOrEmpty(item) && index < param.Length)
+                     {
+                         param[index] = item;
+                         index++;
+                     }
+                 }
+
+                 double number1 = double.Parse(param[1]);
+                 double number2 = double.Parse(param[2]);
+
+                 dataAdd.Math(param[0], number1, number2);
+             }
+                      
             
 
-        private static int RandomNum()
-        {
-            Random rand = new Random();
-            int x = rand.Next(1, 15);
-            return x;
+
+
         }
-
-
     } 
 }
