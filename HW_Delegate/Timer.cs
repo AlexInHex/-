@@ -9,17 +9,27 @@ namespace HW_Delegate
 {
     class Timer
     {
-        public static void TimerStart()
-        {
-            int timer = 0;
 
-            Console.WriteLine(timer);
-            Thread.Sleep(1000);
-            timer++;
-            }
+        private TimerDelegat<int> timerEventHandlers;
+
+        public event TimerDelegat<int> TimerEventHandler
+        {
+            add { timerEventHandlers += value;}
+            remove { timerEventHandlers -= value;}
         }
 
+        private int counter = 0;
 
+        public void TimerStart()
+        {
+            
+            while (true)
+            {  
+                Thread.Sleep(1000);
+                timerEventHandlers?.Invoke(this, counter);
+                counter++;
 
+            }
+        }
     }
 }

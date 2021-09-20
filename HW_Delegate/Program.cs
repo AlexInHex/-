@@ -10,31 +10,28 @@ namespace HW_Delegate
     class Program
     {
         
-        private static void Handler1()
+
+        private static void Handler1<TEventArgs>(object obj, TEventArgs e)
         {
             Console.WriteLine("Таймер запущен");
         }
 
-        private static void Handler2()
+        private static void Handler2(object obj, int e)
         {
-            Console.WriteLine();                
-        }
-
-        
-        
+            Console.WriteLine(e);                
+        }                
 
         static void Main(string[] args)
         {
-            TimerEvent instance = new TimerEvent();
             Timer timer = new Timer();
-            instance.tick += new timerDelegat (Handler1);
-            instance.tick += Handler2;
 
-            
+            timer.TimerEventHandler += new TimerDelegat<int>(Handler1);
+            timer.TimerEventHandler += Handler2;
 
-            instance.InvokeEvent();
+            timer.TimerStart();
 
-            
+
+
         }
     }
 }

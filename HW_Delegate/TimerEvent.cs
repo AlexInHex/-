@@ -7,14 +7,6 @@ using System.Threading;
 
 namespace HW_Delegate
 {
-    public delegate void timerDelegat();
-    class TimerEvent
-    {
-        public event timerDelegat tick = null;
-
-        public void InvokeEvent()
-        {
-            tick.Invoke();
-        }
-    }
+    public delegate void TimerDelegat<TEventArgs>(object obj, TEventArgs e);
+   
 }
