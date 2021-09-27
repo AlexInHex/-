@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace HW_Delegate
 {
@@ -6,7 +7,17 @@ namespace HW_Delegate
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Timer timer = new Timer(() => Console.WriteLine("0_0"), 3);
+
+
+            timer.Start();
+
+
+
+            
+
+
         }
     }
 }
