@@ -30,3 +30,19 @@ C:\Users\D\Downloads\Async.7z (1)\Async\Async\obj\Debug\net5.0\Async.dll
 C:\Users\D\Downloads\Async.7z (1)\Async\Async\obj\Debug\net5.0\ref\Async.dll
 C:\Users\D\Downloads\Async.7z (1)\Async\Async\obj\Debug\net5.0\Async.pdb
 C:\Users\D\Downloads\Async.7z (1)\Async\Async\obj\Debug\net5.0\Async.genruntimeconfig.cache
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.csproj.AssemblyReference.cache
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.AssemblyInfoInputs.cache
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.AssemblyInfo.cs
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.csproj.CoreCompileInputs.cache
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.dll
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\ref\Async.dll
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.pdb
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.exe
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.deps.json
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.runtimeconfig.json
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.runtimeconfig.dev.json
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.dll
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\ref\Async.dll
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\bin\Debug\net5.0\Async.pdb
+C:\Users\D\Source\Repos\-pijiopjioj\Async\Async\obj\Debug\net5.0\Async.genruntimeconfig.cache

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Async
 {
@@ -6,18 +7,17 @@ namespace Async
     {
         private readonly Repository repository = new Repository();
 
-        public CreditInfo Calculate()
+        public async Task<CreditInfo> Calculate()
         {
-            int clientId = repository.GetClientId();
-            string firstName = repository.GetFirstName(clientId);
-            string lastName = repository.GetLastName(clientId);
-            long creditId = repository.GetCreditId(clientId);
+            Task<int> clientId =  repository.GetClientId();
+            Task<string> fullname =  repository.GetFullName(clientId);
+            long creditId =  repository.GetCreditId(clientId);
 
-            DateTime dateOfCredit = repository.GetDateOfCredit(creditId);
-            int creditAmount = repository.GetCreditAmount(creditId);
-            int monthlyRate = repository.GetMonthlyRate(creditId);
-            int monthlyPayment = repository.GetMonthlyPayment(creditId);
-            int creditTerm = repository.GetCreditTerm(creditId);
+            DateTime dateOfCredit =  repository.GetDateOfCredit(creditId);
+            int creditAmount =  repository.GetCreditAmount(creditId);
+            int monthlyRate =  repository.GetMonthlyRate(creditId);
+            int monthlyPayment =  repository.GetMonthlyPayment(creditId);
+            int creditTerm =  repository.GetCreditTerm(creditId);
 
             // Вычисляем количество месяцев с получения кредита
             int months = 12 * (DateTime.Now.Year - dateOfCredit.Year) + DateTime.Now.Month - dateOfCredit.Month;
@@ -30,7 +30,7 @@ namespace Async
 
             return new CreditInfo
             {
-                FullName = $"{firstName} {lastName}",
+                FullName = $"{fullname}",
                 PaidAmount = paidAmount,
                 LeftToPay = creditAmount + interestCharges - paidAmount
             };
