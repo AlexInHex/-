@@ -9,9 +9,5 @@ namespace HW_Delegate
     class Client : Person
     {
         public int Cash { get; set; }
-        public Client(int id ,string name, int age, int cash) : base (id, name, age)
-        {
-            Cash = cash;
-        }
     }
 }

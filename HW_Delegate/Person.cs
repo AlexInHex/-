@@ -8,19 +8,8 @@ namespace HW_Delegate
 {
     abstract class Person
     {
-        private int id;
-        private string name;
-        private int age;
-
-        public int Id { get; private set; }
-        public int Name { get; private set; }
-        public int Age { get; private set; }
-
-        public Person(int Id, string Name, int Age)
-        {
-            Id = id;
-            Name = name;
-            Age = age;
-        }
+        public int Id { get;  set; }
+        public string Name { get;  set; }
+        public int Age { get;  set; }
     }
 }

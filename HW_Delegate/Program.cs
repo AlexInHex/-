@@ -6,15 +6,8 @@ namespace HW_Delegate
     {
         static void Main(string[] args)
         {
+            var person = PersonFactory.CreateClient(1, "alex", 25, 1000); 
 
-            while (true)
-            {
-                string userText = Console.ReadLine();
-
-                string[] splitUserText = userText.Split(' ');
-
-                                
-            }                       
         }
     }
 }
