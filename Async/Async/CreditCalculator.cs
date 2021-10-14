@@ -10,17 +10,17 @@ namespace Async
 
         public async Task<CreditInfo> Calculate()
         {
-            
 
-            Task<int> clientId =  repository.GetClientId();
-            string fullname =  repository.GetFullName(clientId);
-            long creditId =  repository.GetCreditId(clientId);
 
-            DateTime dateOfCredit =  repository.GetDateOfCredit(creditId);
-            int creditAmount =  repository.GetCreditAmount(creditId);
-            int monthlyRate =  repository.GetMonthlyRate(creditId);
-            int monthlyPayment =  repository.GetMonthlyPayment(creditId);
-            int creditTerm =  repository.GetCreditTerm(creditId);
+            Task<int> getClientId = repository.GetClientId();
+            Task<string> getFullname = repository.GetFullName(await getClientId);
+            Task<long> getCreditId = repository.GetCreditId(await getClientId);
+
+            Task<DateTime> dateOfCredit = repository.GetDateOfCredit(await getCreditId);
+            Task<int> creditAmount = repository.GetCreditAmount(await getCreditId);
+            Task<int> monthlyRate = repository.GetMonthlyRate(await getCreditId);
+            Task<int> monthlyPayment = repository.GetMonthlyPayment(await getCreditId);
+            Task<int> creditTerm = repository.GetCreditTerm(await getCreditId);
 
             // Вычисляем количество месяцев с получения кредита
             int months = 12 * (DateTime.Now.Year - dateOfCredit.Year) + DateTime.Now.Month - dateOfCredit.Month;
