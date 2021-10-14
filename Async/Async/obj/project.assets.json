@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\D\\Source\\Repos\\-pijiopjioj\\Async\\Async\\Async.csproj",
+      "projectUniqueName": "C:\\Users\\D\\Source\\Repos\\-sdd\\Async\\Async\\Async.csproj",
       "projectName": "Async",
-      "projectPath": "C:\\Users\\D\\Source\\Repos\\-pijiopjioj\\Async\\Async\\Async.csproj",
+      "projectPath": "C:\\Users\\D\\Source\\Repos\\-sdd\\Async\\Async\\Async.csproj",
       "packagesPath": "C:\\Users\\D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\D\\Source\\Repos\\-pijiopjioj\\Async\\Async\\obj\\",
+      "outputPath": "C:\\Users\\D\\Source\\Repos\\-sdd\\Async\\Async\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\D\\AppData\\Roaming\\NuGet\\NuGet.Config",

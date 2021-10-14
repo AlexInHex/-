@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Async
@@ -9,8 +10,10 @@ namespace Async
 
         public async Task<CreditInfo> Calculate()
         {
+            
+
             Task<int> clientId =  repository.GetClientId();
-            Task<string> fullname =  repository.GetFullName(clientId);
+            string fullname =  repository.GetFullName(clientId);
             long creditId =  repository.GetCreditId(clientId);
 
             DateTime dateOfCredit =  repository.GetDateOfCredit(creditId);

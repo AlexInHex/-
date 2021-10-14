@@ -12,6 +12,9 @@ namespace Async
 
             CreditCalculator calculator = new CreditCalculator();
             Stopwatch sw = Stopwatch.StartNew();
+
+
+
             CreditInfo info = await calculator.Calculate();
 
             Console.WriteLine($"Время загрузки: {sw.Elapsed}");
